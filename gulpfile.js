@@ -4,7 +4,6 @@ const browserSync = require('browser-sync').create();
 const scss = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
-const uglify = require('gulp-uglify');
 const htmlmin = require('gulp-html-minifier-terser');
 const concat = require('gulp-concat');
 const del = require('del');
@@ -21,7 +20,13 @@ const browsersync = () => {
 const watching = () => {
     watch(['app/*.html']).on('change', browserSync.reload);
     watch(['app/scss/**/*.scss'], styles);
-    watch(['app/js/index.js', '!app/js/index.min.js', '!app/js/index.min.js.map'], scripts);
+    watch(['!app/js/main.js'], scripts);
+};
+
+const htmls = () => {
+    return src('app/*.html')
+        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(dest('dist/'));
 };
 
 const styles = () => {
@@ -41,23 +46,11 @@ const styles = () => {
 };
 
 const scripts = () => {
-    return src(['app/js/index.js'])
-        .pipe(sourcemaps.init())
-        .pipe(concat('index.min.js'))
-        .pipe(uglify())
-        .pipe(sourcemaps.write('.'))
-        .pipe(dest('app/js'))
-        .pipe(browserSync.stream());
+    return src(['app/js/main.js']).pipe(dest('app/js')).pipe(browserSync.stream());
 };
 
 const cleanDist = () => {
     return del('dist');
-};
-
-const htmls = () => {
-    return src('app/*.html')
-        .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(dest('dist/'));
 };
 
 const build = () => {
@@ -65,8 +58,7 @@ const build = () => {
         [
             'app/css/style.min.css',
             'app/css/style.min.css.map',
-            'app/js/index.min.js',
-            'app/js/index.min.js.map',
+            'app/js/**/*.js',
             'app/fonts/**/*',
             'app/images/**/*',
         ],

@@ -1,0 +1,46 @@
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: rgba(15, 15, 15, 0.3);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+
+    &__list {
+        display: flex;
+        margin-right: auto;
+        font-size: 20px;
+        line-height: 30px;
+
+        li {
+            + li {
+                margin-left: 55px;
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        margin-right: 50px;
+
+        li {
+            + li {
+                margin-left: 25px;
+            }
+        }
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 100px;
+        width: 180px;
+        height: 54px;
+    }
+}
