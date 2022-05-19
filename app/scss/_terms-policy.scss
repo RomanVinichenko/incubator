@@ -1,0 +1,52 @@
+.terms-policy {
+    padding-top: 246px;
+    padding-bottom: 230px;
+
+    &__container {
+        max-width: 976px;
+    }
+
+    h1 {
+        margin-bottom: 50px;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 72px;
+    }
+
+    h3 {
+        margin: 50px 0 15px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    p {
+        margin-bottom: 15px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    ul {
+        margin-bottom: 50px;
+        padding-left: 26px;
+
+        li {
+            position: relative;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 27px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: -16px;
+                top: 12px;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: #fff;
+            }
+        }
+    }
+}
