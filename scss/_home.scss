@@ -96,53 +96,95 @@
     margin-bottom: 100px;
   }
 
-  ul {
-    display: flex;
+  &__slider {
+    box-sizing: border-box;
+    position: relative;
+  }
 
-    li {
-      padding: 38px 26px 40px 30px;
-      width: 100%;
-      height: 200px;
-      max-width: 256px;
-      border: 3px solid transparent;
-      border-radius: 35px;
-      background:
-        linear-gradient(#202020, #202020) padding-box,
-        linear-gradient(90.71deg, #8d5bdf 0%, #1860ed 100%) border-box;
+  .slick-track {
+  }
 
-      &:not(:last-child) {
-        margin-right: 51px;
-      }
+  .slick-arrow {
+    position: absolute;
+    right: 0;
+    top: -73px;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 46px;
+    font-size: 0;
+    line-height: 40px;
+    background: rgba(0, 0, 0, 0.5);
 
-      h5 {
-        position: relative;
-        margin-bottom: 10px;
-        padding-bottom: 10px;
-        font-weight: 700;
-        font-size: 48px;
-        line-height: 100%;
-        -webkit-text-fill-color: transparent;
-        text-fill-color: transparent;
+    &::after {
+      content: url("../images/slick-arrow-right.svg");
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 10;
+      width: 24px;
+      height: 24px;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .slick-prev {
+    right: 55px;
+
+    &::after {
+      content: url("../images/slick-arrow-left.svg") !important;
+    }
+  }
+
+  .slick-next {
+
+  }
+
+  &__item {
+    display: inline-block;
+    padding: 38px 26px 40px 30px;
+    height: 200px;
+    max-width: 256px;
+    border: 3px solid transparent;
+    border-radius: 35px;
+    background:
+      linear-gradient(#202020, #202020) padding-box,
+      linear-gradient(90.71deg, #8d5bdf 0%, #1860ed 100%) border-box;
+
+    + .get__item {
+      margin-left: 50px;
+    }
+
+    h5 {
+      position: relative;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 100%;
+      -webkit-text-fill-color: transparent;
+      text-fill-color: transparent;
+      background-image: linear-gradient(90.71deg, #8d5bdf 0%, #1860ed 100%);
+      background-clip: text;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        border-radius: 22px;
         background-image: linear-gradient(90.71deg, #8d5bdf 0%, #1860ed 100%);
-        background-clip: text;
-
-        &::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          width: 100%;
-          height: 3px;
-          border-radius: 22px;
-          background-image: linear-gradient(90.71deg, #8d5bdf 0%, #1860ed 100%);
-        }
       }
+    }
 
-      p {
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 27px;
-      }
+    p {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 27px;
     }
   }
 }
@@ -164,10 +206,14 @@
 }
 
 .form {
+  &__wrapper {
+    position: relative;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 180px;
+    padding-bottom: 183px;
 
     label {
       display: flex;
@@ -252,6 +298,75 @@
       outline-offset: 0;
       text-decoration: none;
       color: inherit;
+    }
+  }
+
+  &__course {
+    position: absolute;
+    bottom: 202px;
+    padding-left: 15px;
+
+    h4,
+    h5 {
+      opacity: 0.5;
+      color: #dfdfdf;
+    }
+
+    h5 {
+      margin-bottom: 10px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    h4 {
+      position: relative;
+      padding-right: 34px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 36px;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 7px;
+        top: 50%;
+        width: 0;
+        height: 0;
+        border-top: 5px solid #dfdfdf;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        transform: translateY(-50%);
+      }
+    }
+
+    ul {
+      position: absolute;
+      right: -500px;
+      padding: 10px;
+      width: 464px;
+      background-color: #2d2d2d;
+
+      li {
+        padding: 10px 15px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: #8d8d8d;
+        transition: 0.2s;
+
+        &:hover {
+          color: #fff;
+          background-color: #3c3c3c;
+          cursor: pointer;
+        }
+
+        &:active {
+          font-weight: 500;
+          background-color: #1d1d1d;
+        }
+      }
     }
   }
 }

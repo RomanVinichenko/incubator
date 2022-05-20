@@ -9,6 +9,7 @@ body {
   background-image: url("../images/bg.webp");
   background-size: cover;
   background-repeat: no-repeat;
+  cursor: default;
 
   &::after {
     content: url("../images/decor.svg");
