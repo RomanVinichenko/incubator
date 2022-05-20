@@ -101,9 +101,6 @@
     position: relative;
   }
 
-  .slick-track {
-  }
-
   .slick-arrow {
     position: absolute;
     right: 0;
@@ -136,10 +133,6 @@
     &::after {
       content: url("../images/slick-arrow-left.svg") !important;
     }
-  }
-
-  .slick-next {
-
   }
 
   &__item {
