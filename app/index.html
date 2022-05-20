@@ -180,28 +180,32 @@
   <section class="get" id="get">
     <div class="container">
       <h3>How to get in</h3>
-      <ul>
-        <li>
+      <div class="get__slider">
+        <div class="get__item">
           <h5>01</h5>
           <p>Acceptance of applications </p>
-        </li>
-        <li>
+        </div>
+        <div class="get__item">
           <h5>02</h5>
           <p>Selection of applications</p>
-        </li>
-        <li>
+        </div>
+        <div class="get__item">
           <h5>03</h5>
           <p>Basic course</p>
-        </li>
-        <li>
+        </div>
+        <div class="get__item">
           <h5>04</h5>
           <p>Examination</p>
-        </li>
-        <li>
+        </div>
+        <div class="get__item">
           <h5>05</h5>
           <p>Practice course</p>
-        </li>
-      </ul>
+        </div>
+        <div class="get__item">
+          <h5>06</h5>
+          <p>Design</p>
+        </div>
+      </div>
     </div>
   </section>
   <section class="question" id="faq">
@@ -303,24 +307,36 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh turpis cursus lectus tortor tempor, nisl
           ultrices dictum. Sed consequat quis magna eleifend aliquam
         </p>
-        <form class="form">
-          <div class="form__inner">
-            <label>
-              <span>Name</span>
-              <input type="text" placeholder="Enter your name" required>
-            </label>
-            <label>
-              <span>Email</span>
-              <input type="text" placeholder="Enter your email" required>
-            </label>
-          </div>
-          <label class="form__checkbox">
-            <input type="checkbox">
-            <span>Agree with <a href="terms.html">Terms and conditions</a>
+        <div class="form__wrapper">
+          <form class="form">
+            <div class="form__inner">
+              <label>
+                <span>Name</span>
+                <input type="text" placeholder="Enter your name" required>
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="text" placeholder="Enter your email" required>
+              </label>
+            </div>
+            <label class="form__checkbox">
+              <input type="checkbox">
+              <span>Agree with <a href="terms.html">Terms and conditions</a>
             </span>
-          </label>
-          <input class="btn" type="submit" disabled>
-        </form>
+            </label>
+            <input class="btn" type="submit" disabled>
+          </form>
+          <div class="form__course">
+            <h5>Type of course</h5>
+            <h4>Choose a course</h4>
+            <ul>
+              <li>Lorem ipsum dolor sit</li>
+              <li>Lorem ipsum dolor sit</li>
+              <li>Lorem ipsum dolor sit</li>
+              <li>Lorem ipsum dolor sit</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -439,6 +455,9 @@
 <!--</div>-->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 
 <script src="js/bootstrap.min.js"></script>
 
