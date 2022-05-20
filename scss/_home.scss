@@ -257,8 +257,13 @@
 .question {
   margin-bottom: 300px;
 
+  h3 {
+    margin-bottom: 100px;
+  }
+
   .panel-group {
     margin-bottom: 0;
+    border-bottom: 1px solid #ebebeb;
   }
 
   .panel {
@@ -290,18 +295,32 @@
     color: #fff;
     background-color: transparent;
 
-    a::before {
-      content: "-";
+    a::before,
+    a::after {
+      content: "";
       position: absolute;
-      right: 0;
-      top: 0;
-      width: 20px;
-      height: 20px;
+      background-color: #fff;
       transition: all 0.2s;
+      border-radius: 20px;
+    }
+    a::after {
+      width: 20px;
+      height: 2px;
+      top: 18px;
+      right: 16px;
+    }
+    a::before {
+      right: 25px;
+      top: 9px;
+      width: 2px;
+      height: 20px;
+      opacity: 0;
+      visibility: hidden;
     }
 
     a.collapsed::before {
-      content: "+";
+      opacity: 1;
+      visibility: visible;
     }
   }
 
