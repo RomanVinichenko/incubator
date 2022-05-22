@@ -1,5 +1,4 @@
 .hero {
-  margin-bottom: 300px;
   padding-top: 276px;
 
   h1 {
@@ -14,11 +13,50 @@
       background-image: linear-gradient(90.71deg, #8d5bdf 0%, #1860ed 100%);
       background-clip: text;
     }
+
+    @include r(1600) {
+      font-size: 83px;
+    }
+
+    @include r($xl) {
+      font-size: 58px;
+    }
+
+    @include r($lg) {
+      font-size: 48px;
+    }
+
+    @include r($md) {
+      font-size: 38px;
+      text-align: center;
+    }
   }
 
   p {
     margin-bottom: 100px;
     max-width: 977px;
+
+    @include r(1600) {
+      max-width: 100%;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    @include r($xl) {
+      margin-bottom: 75px;
+    }
+
+    @include r($lg) {
+      margin-bottom: 50px;
+    }
+
+    @include r($md) {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      text-align: center;
+    }
   }
 
   ul {
@@ -27,50 +65,129 @@
     grid-template-columns: 1fr 1fr 1fr;
 
     img {
-      margin-bottom: 25px;
+      margin: 0 0 25px;
       width: 120px;
       height: 120px;
+
+      @include r($xl) {
+        width: 90px;
+        height: 90px;
+      }
+
+      @include r($md) {
+        margin: 0 auto 15px;
+      }
     }
 
     h4 {
       font-weight: 500;
       font-size: 24px;
       line-height: 36px;
+
+      @include r(1600) {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+      }
+
+      @include r($lg) {
+        font-size: 14px;
+        line-height: 21px;
+      }
     }
+
+    @include r($xl) {
+      grid-column-gap: 30px;
+    }
+
+    @include r($md) {
+      grid-column-gap: 0;
+      grid-row-gap: 15px;
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+
+  @include r($xl) {
+    padding-top: 200px;
+  }
+
+  @include r($lg) {
+    padding-top: 155px;
+  }
+
+  @include r($md) {
+    padding-top: 105px;
   }
 }
 
 .mission {
-  margin: 0 0 300px;
+  h3 {
+    margin: 0;
+
+    @include r($lg) {
+      margin-bottom: 35px;
+    }
+
+    @include r($md) {
+      margin-bottom: 20px;
+    }
+  }
 
   &__inner {
     display: flex;
+
+    @include r($lg) {
+      flex-direction: column;
+    }
   }
 
   &__head {
     margin-right: 50px;
-    width: 100%;
     min-width: 460px;
     max-width: 460px;
+
+    @include r(1600) {
+      min-width: 367px;
+      max-width: 367px;
+    }
+
+    @include r($xl) {
+      min-width: 307px;
+      max-width: 307px;
+    }
+
+    @include r($lg) {
+      margin-right: 0;
+      min-width: 100%;
+      max-width: 100%;
+    }
   }
 
   &__info {
     p {
       margin-bottom: 15px;
+
+      @include r(1600) {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+      }
+
+      @include r($md) {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+      }
     }
   }
 }
 
 .tech {
-  margin-bottom: 300px;
-
-  h3 {
-    margin-bottom: 100px;
-  }
-
   ul {
     display: grid;
-    grid-gap: 51px;
+    grid-gap: 0 51px;
     grid-template-columns: 1fr 1fr 1fr;
 
     li {
@@ -85,15 +202,52 @@
       background:
         linear-gradient(#202020, #202020) padding-box,
         linear-gradient(90.71deg, #8d5bdf 0%, #1860ed 100%) border-box;
+
+      img {
+        @include r($xl) {
+          transform: scale(0.8);
+        }
+
+        @include r($lg) {
+          transform: scale(0.6);
+        }
+      }
+
+      @include r(1600) {
+        height: 180px;
+      }
+
+      @include r($xl) {
+        height: 140px;
+        border-radius: 15px;
+      }
+
+      @include r($lg) {
+        height: 102px;
+      }
+
+      @include r($lg) {
+        max-width: 100%;
+        border-radius: 20px;
+      }
+    }
+
+    @include r(1600) {
+      grid-gap: 0 30px;
+    }
+
+    @include r($md) {
+      grid-gap: 20px 0;
+      grid-template-columns: 1fr;
     }
   }
 }
 
 .get {
-  margin-bottom: 300px;
-
   h3 {
-    margin-bottom: 100px;
+    @include r($md) {
+      margin-bottom: 25px;
+    }
   }
 
   &__slider {
@@ -125,6 +279,10 @@
       height: 24px;
       transform: translate(-50%, -50%);
     }
+
+    @include r($md) {
+      display: none !important;
+    }
   }
 
   .slick-prev {
@@ -140,6 +298,7 @@
     padding: 38px 26px 40px 30px;
     height: 200px;
     max-width: 256px;
+    outline: none;
     border: 3px solid transparent;
     border-radius: 35px;
     background:
@@ -148,6 +307,10 @@
 
     + .get__item {
       margin-left: 50px;
+
+      @include r($xl) {
+        margin-left: 20px;
+      }
     }
 
     h5 {
@@ -178,11 +341,28 @@
       font-weight: 600;
       font-size: 18px;
       line-height: 27px;
+
+      @include r($lg) {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+      }
+    }
+
+    @include r($xl) {
+      padding: 25px 26px 25px 30px;
+      height: 172px;
+    }
+
+    @include r($lg) {
+      padding: 25px 20px;
+      height: 141px;
     }
   }
 }
 
 .contact {
+  margin: 0;
   padding-bottom: 125px;
 
   h3 {
@@ -195,6 +375,25 @@
 
   p {
     margin-bottom: 63px;
+
+    @include r(1600) {
+      margin-bottom: 50px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    @include r($md) {
+      margin-bottom: 35px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      text-align: center;
+    }
+  }
+
+  @include r($md) {
+    padding-bottom: 50px;
   }
 }
 
@@ -218,18 +417,27 @@
       span {
         opacity: 0.5;
         margin-bottom: 10px;
-        padding-left: 15px;
+        padding: 0 15px;
         font-weight: 400;
         font-size: 18px;
         line-height: 27px;
         color: #dfdfdf;
+
+        @include r($lg) {
+          font-size: 14px;
+          line-height: 21px;
+        }
+
+        @include r($md) {
+          margin-bottom: 5px;
+          font-size: 12px;
+          line-height: 18px;
+        }
       }
 
       input {
         margin: 0;
-        padding: 0;
-        padding-bottom: 10px;
-        padding-left: 15px;
+        padding: 0 15px 10px;
         outline: 0;
         outline-offset: 0;
         border: none;
@@ -243,9 +451,9 @@
 
         &::placeholder {
           opacity: 0.5;
-          font-weight: 500;
-          font-size: 24px;
-          line-height: 36px;
+          font-weight: inherit;
+          font-size: inherit;
+          line-height: inherit;
           color: #dfdfdf;
         }
 
@@ -257,7 +465,41 @@
           text-decoration: none;
           color: inherit;
         }
+
+        @include r($lg) {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 27px;
+        }
+
+        @include r($md) {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 21px;
+        }
       }
+
+      @include r($xl) {
+        max-width: 420px;
+      }
+
+      @include r($lg) {
+        margin-bottom: 35px;
+        max-width: 100%;
+      }
+
+      @include r($md) {
+        margin-bottom: 25px;
+      }
+    }
+
+    @include r($lg) {
+      flex-direction: column;
+      padding-bottom: 103px;
+    }
+
+    @include r($md) {
+      padding-bottom: 82px;
     }
   }
 
@@ -269,6 +511,18 @@
       font-weight: 500;
       font-size: 24px;
       line-height: 36px;
+
+      @include r($lg) {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+      }
+
+      @include r($md) {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+      }
     }
 
     a {
@@ -276,6 +530,10 @@
       text-fill-color: transparent;
       background-image: linear-gradient(90.71deg, #8d5bdf 0%, #1860ed 100%);
       background-clip: text;
+    }
+
+    @include r($md) {
+      margin-bottom: 35px;
     }
   }
 
@@ -297,7 +555,7 @@
   &__course {
     position: absolute;
     bottom: 202px;
-    padding-left: 15px;
+    padding: 0 0 0 15px;
 
     h4,
     h5 {
@@ -310,6 +568,17 @@
       font-weight: 400;
       font-size: 18px;
       line-height: 27px;
+
+      @include r($lg) {
+        font-size: 14px;
+        line-height: 21px;
+      }
+
+      @include r($md) {
+        margin-bottom: 5px;
+        font-size: 12px;
+        line-height: 18px;
+      }
     }
 
     h4 {
@@ -332,11 +601,23 @@
         border-left: 5px solid transparent;
         transform: translateY(-50%);
       }
+
+      @include r($lg) {
+        font-size: 18px;
+        line-height: 27px;
+      }
+
+      @include r($md) {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+      }
     }
 
     ul {
       position: absolute;
       right: -500px;
+      display: none;
       padding: 10px;
       width: 464px;
       background-color: #2d2d2d;
@@ -361,14 +642,29 @@
         }
       }
     }
+
+    @include r($lg) {
+      bottom: 171px;
+      padding: 0 15px 10px;
+      width: 100%;
+      border-bottom: 1px solid #fff;
+    }
+
+    @include r($md) {
+      bottom: 140px;
+    }
   }
 }
 
 .question {
-  margin-bottom: 300px;
-
   h3 {
-    margin-bottom: 100px;
+    @include r($lg) {
+      margin-bottom: 35px;
+    }
+
+    @include r($md) {
+      margin-bottom: 35px;
+    }
   }
 
   .panel-group {
@@ -377,7 +673,7 @@
   }
 
   .panel {
-    padding: 35px 0;
+    padding: 35px 0 35px 15px;
     border-top: 1px solid #ebebeb;
     border-right: none;
     border-bottom: none;
@@ -388,13 +684,39 @@
     + .panel {
       margin-top: 0;
     }
+
+    @include r(1600) {
+      padding: 30px 0 30px 15px;
+    }
+
+    @include r($xl) {
+      padding: 20px 0 20px 15px;
+    }
   }
 
   .panel-title {
+    padding-right: 50px;
     font-weight: 500;
     font-size: 24px;
     line-height: 36px;
     color: #fff;
+
+    @include r(1600) {
+      font-size: 22px;
+      line-height: 32px;
+    }
+
+    @include r($xl) {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    @include r($md) {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
 
   .panel-heading {
@@ -409,25 +731,34 @@
     a::after {
       content: "";
       position: absolute;
+      top: 50%;
       border-radius: 20px;
       background-color: #fff;
+      transform: translateY(-50%);
       transition: all 0.2s;
     }
 
     a::after {
       right: 16px;
-      top: 18px;
       width: 20px;
       height: 2px;
+
+      @include r($md) {
+        width: 16px;
+      }
     }
 
     a::before {
       right: 25px;
-      top: 9px;
       visibility: hidden;
       opacity: 0;
       width: 2px;
       height: 20px;
+
+      @include r($md) {
+        right: 23px;
+        height: 16px;
+      }
     }
 
     a.collapsed::before {
@@ -463,6 +794,23 @@
         height: 100%;
         background-image: linear-gradient(90.71deg, #8d5bdf 0%, #1860ed 100%);
       }
+
+      @include r($lg) {
+        padding: 9px 0 9px 15px;
+      }
+
+      @include r($md) {
+        padding: 0 0 0 15px;
+      }
+    }
+
+    @include r($lg) {
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    @include r($md) {
+      padding: 0 0 0 10px;
     }
   }
 

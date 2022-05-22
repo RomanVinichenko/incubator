@@ -7,6 +7,7 @@ body {
   line-height: 36px;
   color: #fff;
   background-image: url("../images/bg.webp");
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   cursor: default;
@@ -14,9 +15,29 @@ body {
   &::after {
     content: url("../images/decor.svg");
     position: absolute;
-    right: -260px;
-    top: -115px;
+    right: 0;
+    top: -3%;
     z-index: -1;
+    width: 1000px;
+    height: 850px;
+
+    @include r($xl) {
+      right: -17%;
+      top: -8%;
+      transform: scale(0.6);
+    }
+
+    @include r($md) {
+      right: -80%;
+      top: -8%;
+      transform: scale(0.5);
+    }
+
+    @include r($sm) {
+      right: -100%;
+      top: -8%;
+      transform: scale(0.4);
+    }
   }
 }
 
@@ -33,20 +54,72 @@ a {
 
 .container {
   margin: 0 auto;
-  padding: 0 17px;
+  padding: 0 50px;
   width: 100%;
-  max-width: 1524px;
+  max-width: 1590px;
 
   &::before,
   &::after {
     display: none;
   }
+
+  @include r(1600) {
+    max-width: 1300px;
+  }
+
+  @include r($lg) {
+    padding: 0 30px;
+    max-width: 834px;
+  }
+
+  @include r($md) {
+    padding: 0 17px;
+  }
+}
+
+section {
+  margin: 0 0 300px;
+
+  @include r(1600) {
+    margin: 0 0 250px;
+  }
+
+  @include r($xl) {
+    margin: 0 0 150px;
+  }
+
+  @include r($lg) {
+    margin: 0 0 100px;
+  }
 }
 
 h3 {
+  margin-bottom: 100px;
   font-weight: 500;
   font-size: 48px;
   line-height: 72px;
+
+  @include r(1600) {
+    margin-bottom: 75px;
+    line-height: 1;
+  }
+
+  @include r($xl) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  @include r($lg) {
+    margin-bottom: 35px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  @include r($md) {
+    margin-bottom: 20px;
+    text-align: center;
+  }
 }
 
 .btn {
@@ -91,11 +164,33 @@ h3 {
     box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.25);
     color: #dfdfdf;
   }
+
+  @include r(1600) {
+    height: 50px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  @include r($xl) {
+    padding: 0 45px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @include r($lg) {
+    padding: 0 63px;
+  }
 }
 
 .btn-content {
   margin: 35px 0 0;
   width: fit-content;
+
+  @include r($md) {
+    margin: 25px auto 0;
+    padding: 0;
+    width: 200px;
+  }
 }
 
 .popup {
@@ -120,6 +215,15 @@ h3 {
     max-width: 800px;
     border-radius: 20px;
     background-color: #fff;
+
+    @include r($xl) {
+      padding: 90px 30px 55px;
+    }
+
+    @include r($lg) {
+      padding: 84px 18px 50px;
+      max-width: 774px;
+    }
   }
 
   h2 {
@@ -134,6 +238,21 @@ h3 {
     text-fill-color: transparent;
     background-image: linear-gradient(90.71deg, #8d5bdf 0%, #1860ed 100%);
     background-clip: text;
+
+    @include r(1600) {
+      font-size: 44px;
+      line-height: 58px;
+    }
+
+    @include r($xl) {
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    @include r($lg) {
+      font-size: 32px;
+      line-height: 48px;
+    }
   }
 
   &__close {
@@ -141,6 +260,21 @@ h3 {
     right: 66px;
     top: 54px;
     cursor: pointer;
+
+    @include r($lg) {
+      right: 52px;
+      top: 45px;
+    }
+
+    @include r($md) {
+      right: 30px;
+      top: 40px;
+    }
+
+    @include r($sm) {
+      right: 16px;
+      top: 35px;
+    }
   }
 
   .btn {
@@ -152,6 +286,14 @@ h3 {
     visibility: visible;
     opacity: 1;
   }
+
+  @include r($lg) {
+    padding: 0 30px;
+  }
+
+  @include r($md) {
+    padding: 0 17px;
+  }
 }
 
 .cookie {
@@ -160,19 +302,39 @@ h3 {
   right: 0;
   bottom: 202px;
   z-index: 20;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
   margin: 0 auto;
-  padding: 94px 50px 50px;
+  padding: 0 50px;
   width: 100%;
-  max-width: 1480px;
-  border-radius: 20px;
-  background-color: #fff;
+  max-width: 1590px;
   transition: all 0.2s;
 
+  &__box {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 84px 50px 50px;
+    border-radius: 20px;
+    background-color: #fff;
+
+    @include r(1600) {
+      padding: 60px 40px 40px;
+    }
+
+    @include r($xl) {
+      padding: 55px 35px 35px;
+    }
+
+    @include r($lg) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 69px 8px 35px;
+    }
+  }
+
   h4 {
-    margin-bottom: 15px;
+    margin: 0 0 15px;
     width: fit-content;
     font-weight: 600;
     font-size: 24px;
@@ -181,6 +343,20 @@ h3 {
     text-fill-color: transparent;
     background-image: linear-gradient(90.71deg, #8d5bdf 0%, #1860ed 100%);
     background-clip: text;
+
+    @include r(1600) {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    @include r($xl) {
+      font-size: 20px;
+    }
+
+    @include r($lg) {
+      margin: 0 auto 25px;
+      text-align: center;
+    }
   }
 
   p {
@@ -188,10 +364,39 @@ h3 {
     font-size: 20px;
     line-height: 1.2;
     color: #454545;
+
+    a {
+      -webkit-text-fill-color: transparent;
+      text-fill-color: transparent;
+      background-image: linear-gradient(90.71deg, #8d5bdf 0%, #1860ed 100%);
+      background-clip: text;
+    }
+
+    @include r(1600) {
+      font-size: 18px;
+    }
+
+    @include r($xl) {
+      font-size: 16px;
+    }
+
+    @include r($lg) {
+      margin-bottom: 25px;
+      font-size: 14px;
+      text-align: center;
+    }
   }
 
   .btn {
     margin-left: 80px;
+
+    @include r($xl) {
+      margin-left: 60px;
+    }
+
+    @include r($lg) {
+      margin: 0 auto;
+    }
   }
 
   &__close {
@@ -199,10 +404,32 @@ h3 {
     right: 56px;
     top: 56px;
     cursor: pointer;
+
+    @include r(1600) {
+      top: 40px;
+    }
+
+    @include r($lg) {
+      right: 21px;
+      top: 26px;
+    }
   }
 
   &--inactive {
     visibility: hidden;
     opacity: 0;
+  }
+
+  @include r(1600) {
+    max-width: 1300px;
+  }
+
+  @include r($lg) {
+    padding: 0 30px;
+    max-width: 834px;
+  }
+
+  @include r($md) {
+    padding: 0 17px;
   }
 }

@@ -81,30 +81,27 @@ $('.menu a').on('click', function () {
 });
 
 $(".get__slider").slick({
-  slidesToShow: 5,
   infinite: false,
   slidesToScroll: 1,
   loop: false,
   dots: false,
   arrows: true,
-  // responsive: [{
-  //   breakpoint: 1024,
-  //   settings: {
-  //     slidesToShow: 3,
-  //     infinite: true
-  //   }
-  //
-  // }, {
-  //
-  //   breakpoint: 600,
-  //   settings: {
-  //     slidesToShow: 2,
-  //     dots: true
-  //   }
-  //
-  // },
+  // responsive: [
   //   {
-  //     breakpoint: 300,
-  //     settings: "unslick" // destroys slick
-  //   }]
+  //     breakpoint: 1600,
+  //     settings: {
+  //     }
+  //   },
+    // {
+    //   breakpoint: 600,
+    //   settings: {
+    //     slidesToShow: 2,
+    //     dots: true
+    //   }
+    // },
+    // {
+    //   breakpoint: 300,
+    //   settings: "unslick"
+    // }
+    // ]
 });

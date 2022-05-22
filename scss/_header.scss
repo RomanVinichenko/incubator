@@ -3,6 +3,7 @@
   left: 0;
   right: 0;
   top: 0;
+  z-index: 30;
   background: rgba(15, 15, 15, 0.3);
   transition: all 0.2s;
 
@@ -15,7 +16,7 @@
 .menu {
   display: flex;
   align-items: center;
-  padding: 20px 0;
+  padding: 21px 0;
 
   &__list {
     display: flex;
@@ -26,6 +27,10 @@
     li {
       + li {
         margin-left: 55px;
+
+        @include r(1300) {
+          margin-left: 30px;
+        }
       }
     }
 
@@ -40,6 +45,19 @@
         color: rgba(255, 255, 255, 0);
       }
     }
+
+    @include r(1600) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @include r($lg) {
+      display: none;
+    }
+
+    @include r(1300) {
+      margin: 0 auto;
+    }
   }
 
   &__social {
@@ -51,6 +69,14 @@
 
       + li {
         margin-left: 25px;
+
+        @include r($xl) {
+          margin-left: 15px;
+        }
+
+        @include r($lg) {
+          margin-left: 25px;
+        }
       }
     }
 
@@ -83,12 +109,13 @@
       opacity: 0;
     }
 
-    svg {
-      &:hover {
-        path {
-          fill: linear-gradient(90.71deg, #8d5bdf 0%, #1860ed 100%);
-        }
-      }
+    @include r($xl) {
+      margin-right: 30px;
+    }
+
+    @include r($lg) {
+      display: none;
+      margin-right: 50px;
     }
   }
 
@@ -99,5 +126,74 @@
     margin-right: 100px;
     width: 180px;
     height: 54px;
+
+    @include r(1300) {
+      margin-right: 0;
+    }
+
+    @include r($xl) {
+      width: 155px;
+    }
+
+    @include r($lg) {
+      width: 120px;
+      height: 35px;
+    }
+  }
+
+  .btn {
+    @include r($lg) {
+      display: none;
+    }
+  }
+
+  &__burger {
+    position: relative;
+    display: none;
+    padding: 0;
+    width: 35px;
+    height: 35px;
+    border: none;
+    font-size: 0;
+    line-height: 35px;
+    background-color: transparent;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      width: 27px;
+      height: 3px;
+      border-radius: 20px;
+      background-color: #fff;
+    }
+
+    &::before {
+      top: 8px;
+    }
+
+    &::after {
+      bottom: 8px;
+    }
+
+    span {
+      position: absolute;
+      left: 4px;
+      top: 16px;
+      width: 27px;
+      height: 3px;
+      border-radius: 20px;
+      background-color: #fff;
+    }
+
+    @include r($lg) {
+      display: block;
+    }
+  }
+
+  @include r($lg) {
+    justify-content: space-between;
+    padding: 10px 0;
   }
 }
