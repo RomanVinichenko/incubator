@@ -347,6 +347,12 @@
         font-size: 15px;
         line-height: 22px;
       }
+
+      @include r($md) {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+      }
     }
 
     @include r($xl) {
@@ -357,6 +363,11 @@
     @include r($lg) {
       padding: 25px 20px;
       height: 141px;
+    }
+
+    @include r($md) {
+      padding: 25px 26px 25px 30px;
+      height: 172px;
     }
   }
 }
@@ -804,13 +815,10 @@
       }
     }
 
-    @include r($lg) {
-      font-size: 14px;
-      line-height: 21px;
-    }
-
     @include r($md) {
       padding: 0 0 0 10px;
+      font-size: 14px;
+      line-height: 21px;
     }
   }
 
