@@ -1,1 +1,10 @@
-//
+@mixin r($width) {
+  @media only screen and (max-width: $width + "px") {
+    @content;
+  }
+}
+
+$xl: 1180;
+$lg: 999;
+$md: 750;
+$sm: 520;
