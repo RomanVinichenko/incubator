@@ -555,7 +555,7 @@
 
   &__course {
     position: absolute;
-    bottom: 202px;
+    top: 132px;
     padding: 0 0 0 15px;
 
     h4,
@@ -645,14 +645,14 @@
     }
 
     @include r($lg) {
-      bottom: 171px;
+      top: 212px;
       padding: 0 15px 10px;
       width: 100%;
       border-bottom: 1px solid #fff;
     }
 
     @include r($md) {
-      bottom: 140px;
+      top: 164px;
     }
   }
 
