@@ -10,10 +10,13 @@ let closeCookie = document.querySelector(".cookie__close");
 const header = document.querySelector(".header");
 const burger = document.querySelector(".menu__burger")
 const menuMobile = document.querySelector(".menu__mobile")
+const body = document.body
 
 if (burger) {
   burger.addEventListener("click", function () {
     menuMobile.classList.toggle("menu__mobile--active");
+    burger.classList.toggle("menu__burger--active");
+    body.classList.toggle('body--noscroll')
   })
 }
 

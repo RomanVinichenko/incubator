@@ -168,7 +168,7 @@
 
     @include r($lg) {
       flex-direction: column;
-      padding-top: 5%;
+      margin: auto 0;
     }
   }
 
@@ -280,6 +280,7 @@
       height: 3px;
       border-radius: 20px;
       background-color: #fff;
+      transition: all 0.2s;
     }
 
     &::before {
@@ -298,10 +299,28 @@
       height: 3px;
       border-radius: 20px;
       background-color: #fff;
+      transition: all 0.2s;
     }
 
     @include r($lg) {
       display: block;
+    }
+  }
+
+  &__burger--active {
+    &::before {
+      top: 16px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      bottom: 16px;
+      transform: rotate(-45deg);
+    }
+
+    span {
+      visibility: hidden;
+      opacity: 0;
     }
   }
 
