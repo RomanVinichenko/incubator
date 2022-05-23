@@ -187,7 +187,7 @@
 .tech {
   ul {
     display: grid;
-    grid-gap: 0 51px;
+    grid-gap: 51px;
     grid-template-columns: 1fr 1fr 1fr;
 
     li {
@@ -255,6 +255,12 @@
     position: relative;
   }
 
+  .slick-list {
+    @include r($md) {
+      //margin: 0 -50px 0 0;
+    }
+  }
+
   .slick-arrow {
     position: absolute;
     right: 0;
@@ -296,7 +302,7 @@
   &__item {
     display: inline-block;
     padding: 38px 26px 40px 30px;
-    height: 200px;
+    min-height: 200px;
     max-width: 256px;
     outline: none;
     border: 3px solid transparent;
@@ -307,6 +313,10 @@
 
     + .get__item {
       margin-left: 50px;
+
+      @include r(1600) {
+        margin-left: 40px;
+      }
 
       @include r($xl) {
         margin-left: 20px;
@@ -357,17 +367,17 @@
 
     @include r($xl) {
       padding: 25px 26px 25px 30px;
-      height: 172px;
+      min-height: 172px;
     }
 
     @include r($lg) {
       padding: 25px 20px;
-      height: 141px;
+      min-height: 141px;
     }
 
     @include r($md) {
       padding: 25px 26px 25px 30px;
-      height: 172px;
+      min-height: 172px;
     }
   }
 }
@@ -424,27 +434,6 @@
       margin: 0;
       width: 100%;
       max-width: 464px;
-
-      span {
-        opacity: 0.5;
-        margin-bottom: 10px;
-        padding: 0 15px;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 27px;
-        color: #dfdfdf;
-
-        @include r($lg) {
-          font-size: 14px;
-          line-height: 21px;
-        }
-
-        @include r($md) {
-          margin-bottom: 5px;
-          font-size: 12px;
-          line-height: 18px;
-        }
-      }
 
       input {
         margin: 0;
@@ -663,6 +652,27 @@
 
     @include r($md) {
       bottom: 140px;
+    }
+  }
+
+  &__head {
+    opacity: 0.5;
+    margin-bottom: 10px;
+    padding: 0 15px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #dfdfdf;
+
+    @include r($lg) {
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    @include r($md) {
+      margin-bottom: 5px;
+      font-size: 12px;
+      line-height: 18px;
     }
   }
 }
