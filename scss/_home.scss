@@ -426,7 +426,7 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 183px;
+    padding-bottom: 173px;
 
     label {
       display: flex;
@@ -438,6 +438,7 @@
       input {
         margin: 0;
         padding: 0 15px 10px;
+        width: 100%;
         outline: 0;
         outline-offset: 0;
         border: none;
@@ -495,11 +496,11 @@
 
     @include r($lg) {
       flex-direction: column;
-      padding-bottom: 103px;
+      padding-bottom: 95px;
     }
 
     @include r($md) {
-      padding-bottom: 82px;
+      padding-bottom: 77px;
     }
   }
 
