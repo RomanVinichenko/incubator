@@ -1,5 +1,5 @@
-$('.logo').click(function () {
-  jQuery('html,body').animate({scrollTop: 0}, 800);
+$(".logo").click(function () {
+  jQuery("html,body").animate({scrollTop: 0}, 800);
 });
 
 let button = document.querySelector(".pop");
@@ -8,7 +8,15 @@ let cookie = document.querySelector(".cookie");
 let closePopUp = document.querySelector(".popup__close");
 let closeCookie = document.querySelector(".cookie__close");
 let body = document.body;
-const header = document.querySelector('.header');
+const header = document.querySelector(".header");
+const burger = document.querySelector(".menu__burger")
+const menuMobile = document.querySelector(".menu__mobile")
+
+if (burger) {
+  burger.addEventListener("click", function () {
+    menuMobile.classList.toggle("menu__mobile--active");
+  })
+}
 
 const prevent = ev => ev.preventDefault();
 
@@ -21,7 +29,7 @@ if (button) {
         overflow-x: hidden;
         overflow-y: hidden;
         `;
-    document.addEventListener('wheel', prevent, {passive: false});
+    document.addEventListener("wheel", prevent, {passive: false});
   })
 }
 
@@ -32,7 +40,7 @@ if (closePopUp) {
         overflow-x: hidden;
         overflow-y: auto;
         `;
-    document.removeEventListener('wheel', prevent);
+    document.removeEventListener("wheel", prevent);
   })
 }
 
@@ -45,7 +53,7 @@ if (closeCookie) {
 let scrollpos = window.scrollY;
 
 
-window.addEventListener('scroll', function () {
+window.addEventListener("scroll", function () {
   scrollpos = window.scrollY;
 
   if (scrollpos >= 50) {
@@ -57,20 +65,20 @@ window.addEventListener('scroll', function () {
 
 const addClass = () => {
   if (header) {
-    header.classList.add('header--active');
+    header.classList.add("header--active");
   }
 };
 const removeClass = () => {
   if (header) {
-    header.classList.remove('header--active');
+    header.classList.remove("header--active");
   }
 };
 
-$('.menu a').on('click', function () {
+$(".menu a").on("click", function () {
 
-  let href = $(this).attr('href');
+  let href = $(this).attr("href");
 
-  $('html, body').animate({
+  $("html, body").animate({
     scrollTop: $(href).offset().top - 120
   }, {
     duration: 370,   // по умолчанию «400»

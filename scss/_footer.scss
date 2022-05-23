@@ -7,27 +7,6 @@
     align-items: center;
     justify-content: space-between;
 
-    p {
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 24px;
-      color: #dfdfdf;
-
-      @include r($xl) {
-        font-size: 16px;
-        line-height: 22px;
-      }
-
-      @include r($lg) {
-        order: 1;
-      }
-
-      @include r($md) {
-        font-size: 12px;
-        line-height: 18px;
-      }
-    }
-
     @include r($lg) {
       flex-direction: column;
     }
@@ -39,58 +18,6 @@
 
     @include r($lg) {
       flex-direction: column-reverse;
-    }
-  }
-
-  &__links {
-    display: flex;
-    align-items: center;
-    margin: 0 25px 0 0;
-
-    a {
-      display: inline-block;
-      width: fit-content;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 24px;
-      color: rgba(255, 255, 255, 1);
-      background: linear-gradient(90.71deg, #8d5bdf 0%, #1860ed 100%);
-      background-clip: text;
-      transition: color 0.2s;
-
-      + a {
-        margin-left: 25px;
-
-        @include r($xl) {
-          margin-left: 20px;
-        }
-
-        @include r($lg) {
-          margin-left: 25px;
-        }
-      }
-
-      &:hover {
-        color: rgba(255, 255, 255, 0);
-      }
-
-      @include r($xl) {
-        font-size: 16px;
-        line-height: 22px;
-      }
-
-      @include r($md) {
-        font-size: 12px;
-        line-height: 24px;
-      }
-    }
-
-    @include r($lg) {
-      margin: 0 0 15px;
-    }
-
-    @include r($md) {
-      margin: 0 0 10px;
     }
   }
 
@@ -117,26 +44,99 @@
     }
   }
 
-  .logo {
-    @include r($xl) {
-      width: 140px;
-    }
-
-    @include r($lg) {
-      margin-bottom: 15px;
-    }
-
-    @include r($md) {
-      margin-bottom: 10px;
-      width: 120px;
-    }
-  }
-
   @include r($lg) {
     padding: 28px 0 20px;
   }
 
   @include r($md) {
     padding: 25px 0 11px;
+  }
+}
+
+.copy {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #dfdfdf;
+
+  @include r($xl) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  @include r($lg) {
+    order: 1;
+  }
+
+  @include r($md) {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.logo-footer {
+  @include r($xl) {
+    width: 140px;
+  }
+
+  @include r($lg) {
+    margin-bottom: 15px;
+  }
+
+  @include r($md) {
+    margin-bottom: 10px;
+    width: 120px;
+  }
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  margin: 0 25px 0 0;
+
+  a {
+    display: inline-block;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 1);
+    background: linear-gradient(90.71deg, #8d5bdf 0%, #1860ed 100%);
+    background-clip: text;
+    transition: color 0.2s;
+
+    + a {
+      margin-left: 25px;
+
+      @include r($xl) {
+        margin-left: 20px;
+      }
+
+      @include r($lg) {
+        margin-left: 25px;
+      }
+    }
+
+    &:hover {
+      color: rgba(255, 255, 255, 0);
+    }
+
+    @include r($xl) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    @include r($md) {
+      font-size: 12px;
+      line-height: 24px;
+    }
+  }
+
+  @include r($lg) {
+    margin: 0 0 15px;
+  }
+
+  @include r($md) {
+    margin: 0 0 10px;
   }
 }
