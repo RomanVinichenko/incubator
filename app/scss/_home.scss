@@ -233,7 +233,7 @@
     }
 
     @include r(1600) {
-      grid-gap: 0 30px;
+      grid-gap: 30px;
     }
 
     @include r($md) {
