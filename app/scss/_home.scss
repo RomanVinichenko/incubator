@@ -246,19 +246,14 @@
 .get {
   h3 {
     @include r($md) {
-      margin-bottom: 25px;
+      margin: 0 auto 25px 0;
+      text-align: left;
     }
   }
 
   &__slider {
     box-sizing: border-box;
     position: relative;
-  }
-
-  .slick-list {
-    @include r($md) {
-      //margin: 0 -50px 0 0;
-    }
   }
 
   .slick-arrow {
@@ -505,7 +500,8 @@
   }
 
   &__checkbox {
-    margin-bottom: 50px;
+    margin: 0 0 50px;
+    width: 100%;
 
     span {
       padding-left: 15px;
@@ -534,7 +530,8 @@
     }
 
     @include r($md) {
-      margin-bottom: 35px;
+      margin: 0 auto 35px;
+      text-align: center;
     }
   }
 
@@ -550,6 +547,10 @@
       outline-offset: 0;
       text-decoration: none;
       color: inherit;
+    }
+
+    @include r($md) {
+      margin: 0 auto;
     }
   }
 

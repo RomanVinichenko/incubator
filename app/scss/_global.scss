@@ -44,6 +44,10 @@ body {
   }
 }
 
+.body--noscroll {
+  overflow: hidden;
+}
+
 a {
   &:active,
   &:hover,
