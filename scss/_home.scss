@@ -389,7 +389,7 @@
     max-width: 976px;
   }
 
-  p {
+  &__text {
     margin-bottom: 63px;
 
     @include r(1600) {
@@ -529,7 +529,7 @@
       background-clip: text;
     }
 
-    @include r($md) {
+    @include r($lg) {
       margin: 0 auto 35px;
       text-align: center;
     }
@@ -549,7 +549,7 @@
       color: inherit;
     }
 
-    @include r($md) {
+    @include r($lg) {
       margin: 0 auto;
     }
   }
