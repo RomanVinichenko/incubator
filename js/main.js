@@ -89,8 +89,10 @@ $(".menu a, .mission a").on("click", function () {
 
   return false;
 });
+
 $(".menu__list a").on("click", function () {
   $('.menu__mobile').removeClass('menu__mobile--active');
+  $('.menu__burger').removeClass('menu__burger--active');
 });
 
 $(".get__slider").slick({
