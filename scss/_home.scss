@@ -390,21 +390,23 @@
   }
 
   &__text {
-    margin-bottom: 63px;
+    p {
+      margin-bottom: 63px;
 
-    @include r(1600) {
-      margin-bottom: 50px;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 27px;
-    }
+      @include r(1600) {
+        margin-bottom: 50px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+      }
 
-    @include r($md) {
-      margin-bottom: 35px;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 21px;
-      text-align: center;
+      @include r($md) {
+        margin-bottom: 35px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+      }
     }
   }
 
@@ -646,14 +648,14 @@
     }
 
     @include r($lg) {
-      top: 212px;
+      top: 219px;
       padding: 0 15px 10px;
       width: 100%;
       border-bottom: 1px solid #fff;
     }
 
     @include r($md) {
-      top: 164px;
+      top: 182px;
     }
   }
 
