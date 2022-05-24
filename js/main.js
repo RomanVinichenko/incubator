@@ -16,7 +16,7 @@ if (burger) {
   burger.addEventListener("click", function () {
     menuMobile.classList.toggle("menu__mobile--active");
     burger.classList.toggle("menu__burger--active");
-    body.classList.toggle('body--noscroll')
+    //body.classList.toggle('body--noscroll')
   })
 }
 
