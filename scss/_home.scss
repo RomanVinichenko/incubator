@@ -59,25 +59,22 @@
     }
   }
 
+  &__lottie {
+    margin-bottom: 25px;
+    width: 120px;
+    height: 120px;
+
+    @include r($md) {
+      margin: 0 auto 15px;
+      width: 90px;
+      height: 90px;
+    }
+  }
+
   ul {
     display: grid;
     grid-column-gap: 51px;
     grid-template-columns: 1fr 1fr 1fr;
-
-    img {
-      margin: 0 0 25px;
-      width: 120px;
-      height: 120px;
-
-      @include r($xl) {
-        width: 90px;
-        height: 90px;
-      }
-
-      @include r($md) {
-        margin: 0 auto 15px;
-      }
-    }
 
     h4 {
       font-weight: 500;
@@ -592,19 +589,6 @@
       font-size: 24px;
       line-height: 36px;
       cursor: pointer;
-
-      &::after {
-        content: "";
-        position: absolute;
-        right: 7px;
-        top: 50%;
-        width: 0;
-        height: 0;
-        border-top: 5px solid #dfdfdf;
-        border-right: 5px solid transparent;
-        border-left: 5px solid transparent;
-        transform: translateY(-50%);
-      }
 
       @include r($lg) {
         font-size: 18px;
