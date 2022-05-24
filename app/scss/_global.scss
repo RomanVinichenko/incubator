@@ -27,9 +27,9 @@ body {
 }
 
 .body-top {
-  position: absolute;
-  right: -20%;
-  top: -5%;
+  position: fixed;
+  right: -24%;
+  top: -28%;
   z-index: -1;
   width: 1400px;
   height: 1400px;
