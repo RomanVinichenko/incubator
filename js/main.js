@@ -1,7 +1,3 @@
-$(".logo").click(function () {
-  jQuery("html,body").animate({scrollTop: 0}, 800);
-});
-
 // let button = document.querySelector(".pop");
 // let popUp = document.querySelector(".popup");
 let cookie = document.querySelector(".cookie");
@@ -10,13 +6,11 @@ let closeCookie = document.querySelector(".cookie__close");
 const header = document.querySelector(".header");
 const burger = document.querySelector(".menu__burger")
 const menuMobile = document.querySelector(".menu__mobile")
-const body = document.body
 
 if (burger) {
   burger.addEventListener("click", function () {
     menuMobile.classList.toggle("menu__mobile--active");
     burger.classList.toggle("menu__burger--active");
-    //body.classList.toggle('body--noscroll')
   })
 }
 
@@ -58,7 +52,7 @@ let scrollpos = window.scrollY;
 window.addEventListener("scroll", function () {
   scrollpos = window.scrollY;
 
-  if (scrollpos >= 50) {
+  if (scrollpos >= 1) {
     addClass();
   } else {
     removeClass();
@@ -75,20 +69,6 @@ const removeClass = () => {
     header.classList.remove("header--active");
   }
 };
-
-$(".menu a, .mission a").on("click", function () {
-
-  let href = $(this).attr("href");
-
-  $("html, body").animate({
-    scrollTop: $(href).offset().top - 120
-  }, {
-    duration: 370,   // по умолчанию «400»
-    easing: "linear" // по умолчанию «swing»
-  });
-
-  return false;
-});
 
 $(".menu__list a").on("click", function () {
   $('.menu__mobile').removeClass('menu__mobile--active');

@@ -73,6 +73,10 @@
     }
   }
 
+  .geometry-small {
+    top: 50%;
+  }
+
   @include r(1600) {
     padding: 200px 0 154px;
   }
