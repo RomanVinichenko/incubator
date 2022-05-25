@@ -57,6 +57,11 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 
+    @include r(1600) {
+      height: 459px;
+      max-width: 491px;
+    }
+
     @include r($xl) {
       height: 365px;
       max-width: 390px;
@@ -79,6 +84,11 @@ body {
     border-radius: 50%;
     background-image: linear-gradient(143.15deg, #6100ff 8.37%, rgba(0, 255, 255, 0) 91.49%);
 
+    @include r(1600) {
+      height: 550px;
+      max-width: 550px;
+    }
+
     @include r($xl) {
       height: 400px;
       max-width: 400px;
@@ -88,6 +98,11 @@ body {
       height: 250px;
       max-width: 250px;
     }
+  }
+
+  @include r(1600) {
+    height: 800px;
+    max-width: 800px;
   }
 
   @include r($xl) {
