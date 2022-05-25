@@ -77,6 +77,10 @@
     top: 50%;
   }
 
+  .geometry {
+    display: none;
+  }
+
   @include r(1600) {
     padding: 200px 0 154px;
   }
