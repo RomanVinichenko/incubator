@@ -26,102 +26,13 @@ body {
   }
 }
 
-.geometry {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: -3;
-  width: 100%;
-  height: 1000px;
-  max-width: 1000px;
-  background-color: transparent;
-  filter: blur(80px);
-
-  &::after,
-  &::before {
-    position: absolute;
-    z-index: -3;
-    background-color: transparent;
-  }
-
-  &::before {
-    content: "";
-    left: 0;
-    top: 0;
-    z-index: 2;
-    width: 100%;
-    height: 664px;
-    max-width: 714px;
-    background-image: url("../images/triangle.svg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    @include r(1600) {
-      height: 459px;
-      max-width: 491px;
-    }
-
-    @include r($xl) {
-      height: 365px;
-      max-width: 390px;
-    }
-
-    @include r($md) {
-      height: 240px;
-      max-width: 259px;
-    }
-  }
-
-  &::after {
-    content: "";
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    width: 100%;
-    height: 825px;
-    max-width: 825px;
-    border-radius: 50%;
-    background-image: linear-gradient(143.15deg, #6100ff 8.37%, rgba(0, 255, 255, 0) 91.49%);
-
-    @include r(1600) {
-      height: 550px;
-      max-width: 550px;
-    }
-
-    @include r($xl) {
-      height: 400px;
-      max-width: 400px;
-    }
-
-    @include r($md) {
-      height: 250px;
-      max-width: 250px;
-    }
-  }
-
-  @include r(1600) {
-    height: 800px;
-    max-width: 800px;
-  }
-
-  @include r($xl) {
-    height: 536px;
-    max-width: 511px;
-  }
-
-  @include r($md) {
-    height: 364px;
-    max-width: 361px;
-  }
-}
-
 .geometry-small {
   content: url("../images/geometry-small.svg");
   position: absolute;
   left: 0;
   top: 0;
   z-index: -3;
+  display: none;
   width: 581px;
   height: 568px;
   background-color: transparent;
@@ -552,23 +463,145 @@ h3 {
 }
 
 .form-accept {
-  font-weight: 400;
+  padding-left: 15px;
+  font-weight: 500;
   font-size: 24px;
   line-height: 36px;
   color: #fff;
 
-  @include r($xl) {
-    font-size: 22px;
-    line-height: 34px;
-  }
-
   @include r($lg) {
-    font-size: 20px;
-    line-height: 32px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
   }
 
   @include r($md) {
-    font-size: 18px;
-    line-height: 30px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+.geometry {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -3;
+  width: 100%;
+  height: 1000px;
+  max-width: 1000px;
+  background-color: transparent;
+  filter: blur(80px);
+
+  &::after,
+  &::before {
+    position: absolute;
+    z-index: -3;
+    background-color: transparent;
+  }
+
+  &::before {
+    content: "";
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 664px;
+    max-width: 714px;
+    background-image: url("../images/triangle.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include r(1600) {
+      height: 459px;
+      max-width: 491px;
+    }
+
+    @include r($xl) {
+      height: 365px;
+      max-width: 390px;
+    }
+
+    @include r($md) {
+      height: 240px;
+      max-width: 259px;
+    }
+  }
+
+  &::after {
+    content: "";
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 825px;
+    max-width: 825px;
+    border-radius: 50%;
+    background-image: linear-gradient(143.15deg, #6100ff 8.37%, rgba(0, 255, 255, 0) 91.49%);
+
+    @include r(1600) {
+      height: 550px;
+      max-width: 550px;
+    }
+
+    @include r($xl) {
+      height: 400px;
+      max-width: 400px;
+    }
+
+    @include r($md) {
+      height: 250px;
+      max-width: 250px;
+    }
+  }
+
+  @include r(1600) {
+    height: 800px;
+    max-width: 800px;
+  }
+
+  @include r($xl) {
+    height: 536px;
+    max-width: 511px;
+  }
+
+  @include r($md) {
+    height: 364px;
+    max-width: 361px;
+  }
+}
+
+.geometry-top {
+  top: 0;
+  bottom: auto;
+  filter: blur(60px);
+
+  &::before {
+    animation: triangle 10s linear reverse infinite;
+  }
+
+  &::after {
+    animation: circle 10s linear infinite;
+  }
+}
+
+@keyframes circle {
+  from {
+    transform: rotate(0deg) translateX(40px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(40px) rotate(-360deg);
+  }
+}
+
+@keyframes triangle {
+  from {
+    transform: rotate(0deg) translateX(40px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(40px) rotate(-360deg);
   }
 }
