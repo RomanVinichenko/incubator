@@ -123,9 +123,6 @@
 }
 
 .mission {
-  position: relative;
-  overflow-x: hidden;
-
   h3 {
     margin: 0;
 
@@ -248,13 +245,6 @@
 }
 
 .get {
-  position: relative;
-
-  .geometry-small {
-    left: auto;
-    right: 0;
-  }
-
   h3 {
     @include r($md) {
       margin: 0 auto 25px 0;
@@ -389,13 +379,8 @@
 }
 
 .contact {
-  position: relative;
   margin: 0;
   padding-bottom: 125px;
-
-  .geometry-small {
-    top: -50%;
-  }
 
   h3 {
     margin-bottom: 20px;
