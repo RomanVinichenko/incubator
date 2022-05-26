@@ -91,7 +91,7 @@
       top: 55px;
       bottom: 0;
       flex-direction: column;
-      height: calc(100vh - 55px);
+      min-height: calc(100vh - 55px);
       background-image: url("../images/bg-mobile.webp");
       background-size: cover;
       transform: translateY(-200%);

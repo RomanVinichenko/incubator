@@ -8,11 +8,14 @@
     line-height: 1.15;
 
     span {
-      display: block;
       -webkit-text-fill-color: transparent;
       text-fill-color: transparent;
       background-image: linear-gradient(90.71deg, #8d5bdf 0%, #1860ed 100%);
       background-clip: text;
+
+      @include r($sm) {
+        display: block;
+      }
     }
 
     @include r(1600) {
@@ -121,6 +124,7 @@
 
 .mission {
   position: relative;
+  overflow-x: hidden;
 
   h3 {
     margin: 0;
@@ -537,10 +541,25 @@
     }
 
     a {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 36px;
       -webkit-text-fill-color: transparent;
       text-fill-color: transparent;
       background-image: linear-gradient(90.71deg, #8d5bdf 0%, #1860ed 100%);
       background-clip: text;
+
+      @include r($lg) {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+      }
+
+      @include r($md) {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+      }
     }
 
     @include r($lg) {
