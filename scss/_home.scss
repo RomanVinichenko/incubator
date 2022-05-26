@@ -123,6 +123,11 @@
 }
 
 .mission {
+  background-image: url("../images/firgure-small.svg");
+  background-position: top left -20%;
+  background-size: contain;
+  background-repeat: no-repeat;
+
   h3 {
     margin: 0;
 
@@ -182,6 +187,10 @@
         text-align: center;
       }
     }
+  }
+
+  @include r($sm) {
+    background-position: top left -100%;
   }
 }
 
@@ -245,6 +254,11 @@
 }
 
 .get {
+  background-image: url("../images/firgure-small.svg");
+  background-position: top right -20%;
+  background-size: contain;
+  background-repeat: no-repeat;
+
   h3 {
     @include r($md) {
       margin: 0 auto 25px 0;
@@ -376,11 +390,19 @@
       min-height: 172px;
     }
   }
+
+  @include r($sm) {
+    background-position: top right -100%;
+  }
 }
 
 .contact {
   margin: 0;
   padding-bottom: 125px;
+  background-image: url("../images/firgure-small.svg");
+  background-position: top left -20%;
+  background-size: contain;
+  background-repeat: no-repeat;
 
   h3 {
     margin-bottom: 20px;
@@ -409,6 +431,10 @@
         text-align: center;
       }
     }
+  }
+
+  @include r($sm) {
+    background-position: top left -100%;
   }
 
   @include r($md) {
