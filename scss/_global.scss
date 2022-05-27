@@ -441,6 +441,7 @@ h3 {
   bottom: 0;
   z-index: -3;
   background-color: transparent;
+  animation: appear 2.5s;
 
   img {
     max-width: 800px;
@@ -474,6 +475,7 @@ h3 {
   height: 1200px;
   overflow: hidden;
   background-color: transparent;
+  animation: appear 2s;
 }
 
 .figure-top__inner {
