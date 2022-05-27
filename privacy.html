@@ -86,8 +86,8 @@
 </header>
 
 <main class="main">
-
   <section class="terms-policy">
+    <img src="images/firgure-small.svg" alt="Figure">
     <div class="container">
       <div class="terms-policy__container">
         <h1>Privacy Policy</h1>
@@ -197,39 +197,39 @@
   </section>
 </main>
 
-<footer class="footer">
+<footer class="footer wow">
   <div class="container">
     <div class="footer__wrapper">
-      <a class="logo" href="#">
+      <a class="logo-footer" href="#">
         <img src="images/logo.svg" alt="Logo">
       </a>
-      <p>© 2020 BHFT. All rights reserved</p>
-      <div class="footer__inner">
+      <div class="footer__box">
+        <p class="copy">© 2020 BHFT. All rights reserved</p>
         <div class="footer__links">
           <a href="privacy.html">Privacy Policy</a>
           <a href="terms.html">Terms and conditions</a>
         </div>
-        <ul class="menu__social">
-          <li>
-            <a href="#">
-              <img class="svg-main" src="images/facebook.svg" alt="Facebook">
-              <img class="svg-color" src="images/facebook-col.svg" alt="Facebook">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img class="svg-main" src="images/twitter.svg" alt="Twitter">
-              <img class="svg-color" src="images/twitter-col.svg" alt="Twitter">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img class="svg-main" src="images/instagram.svg" alt="Instagram">
-              <img class="svg-color" src="images/instagram-color.svg" alt="Instagram">
-            </a>
-          </li>
-        </ul>
       </div>
+      <ul class="menu__social">
+        <li>
+          <a href="#">
+            <img class="svg-main" src="images/facebook.svg" alt="Facebook">
+            <img class="svg-color" src="images/facebook-col.svg" alt="Facebook">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img class="svg-main" src="images/twitter.svg" alt="Twitter">
+            <img class="svg-color" src="images/twitter-col.svg" alt="Twitter">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img class="svg-main" src="images/instagram.svg" alt="Instagram">
+            <img class="svg-color" src="images/instagram-color.svg" alt="Instagram">
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </footer>
@@ -242,7 +242,7 @@
   </div>
 </div>
 
-<div class="cookie">
+<div class="cookie wow">
   <div class="cookie__box">
     <img class="cookie__close" src="images/close.svg" alt="Close">
     <div class="cookie__box-inner">
@@ -255,10 +255,14 @@
   </div>
 </div>
 
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script src="js/wow.min.js"></script>
+<script>
+  new WOW().init();
+</script>
 
 <script src="js/bootstrap.min.js"></script>
 

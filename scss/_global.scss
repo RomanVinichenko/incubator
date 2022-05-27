@@ -284,6 +284,8 @@ h3 {
   width: 100%;
   max-width: 1590px;
   transition: all 0.2s;
+  animation-name: cook;
+  animation-duration: 1.5s;
 
   &__box {
     position: relative;
@@ -561,5 +563,41 @@ h3 {
 
   to {
     transform: rotate(360deg) translateX(40px) rotate(-360deg);
+  }
+}
+
+@keyframes printed_text {
+  from {
+    visibility: hidden;
+    width: 0;
+  }
+
+  to {
+    visibility: visible;
+    width: 100%;
+  }
+}
+
+@keyframes appear {
+  from {
+    visibility: hidden;
+    opacity: 0;
+    color: transparent;
+  }
+
+  to {
+    visibility: visible;
+    opacity: 1;
+    color: #fff;
+  }
+}
+
+@keyframes cook {
+  from {
+    transform: translateY(20px);
+  }
+
+  to {
+    transform: translateY(0);
   }
 }

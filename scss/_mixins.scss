@@ -8,3 +8,10 @@ $xl: 1180;
 $lg: 999;
 $md: 750;
 $sm: 520;
+
+@mixin text-clamp {
+  display: box;
+  overflow: hidden;
+  box-orient: vertical;
+  -webkit-line-clamp: 3;
+}

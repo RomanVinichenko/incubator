@@ -6,6 +6,7 @@
   z-index: 30;
   background: rgba(15, 15, 15, 0.3);
   transition: box-shadow 0.2s, background-color 0.12s;
+  animation: appear 2s;
 
   .footer__links {
     display: none;

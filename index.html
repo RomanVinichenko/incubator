@@ -115,7 +115,7 @@
       </ul>
     </div>
   </section>
-  <section class="mission" id="mission">
+  <section class="mission wow" id="mission">
     <div class="container">
       <div class="mission__inner">
         <div class="mission__head">
@@ -134,7 +134,7 @@
       </div>
     </div>
   </section>
-  <section class="tech" id="tech">
+  <section class="tech wow" id="tech">
     <div class="container">
       <h3>Tech we teach</h3>
       <ul>
@@ -150,7 +150,7 @@
       </ul>
     </div>
   </section>
-  <section class="get" id="get">
+  <section class="get wow" id="get">
     <div class="container">
       <h3>How to get in</h3>
       <div class="get__slider">
@@ -181,7 +181,7 @@
       </div>
     </div>
   </section>
-  <section class="question" id="faq">
+  <section class="question wow" id="faq">
     <div class="container">
       <h3>Frequently Asked Questions</h3>
       <div class="panel-group" id="accordion">
@@ -273,7 +273,7 @@
       </div>
     </div>
   </section>
-  <section class="contact" id="connect">
+  <section class="contact wow" id="connect">
     <div class="container">
       <div class="contact__inner">
         <h3>Submit your application</h3>
@@ -316,8 +316,7 @@
     </div>
   </section>
 </main>
-
-<footer class="footer">
+<footer class="footer wow">
   <div class="container">
     <div class="footer__wrapper">
       <a class="logo-footer" href="#">
@@ -362,18 +361,18 @@
   </div>
 </div>
 
-<!--<div class="cookie">-->
-<!--  <div class="cookie__box">-->
-<!--    <img class="cookie__close" src="images/close.svg" alt="Close">-->
-<!--    <div class="cookie__box-inner">-->
-<!--      <h4>Cookies & Privacy</h4>-->
-<!--      <p>In accordance with the current EU data protection laws, please take a minute to reviwe the <a href="terms.html">term & conditions</a>-->
-<!--        for using our services. Our terms describe how we use data and the options available to you.-->
-<!--      </p>-->
-<!--    </div>-->
-<!--    <a class="btn" href="#">Accept</a>-->
-<!--  </div>-->
-<!--</div>-->
+<div class="cookie wow">
+  <div class="cookie__box">
+    <img class="cookie__close" src="images/close.svg" alt="Close">
+    <div class="cookie__box-inner">
+      <h4>Cookies & Privacy</h4>
+      <p>In accordance with the current EU data protection laws, please take a minute to reviwe the <a href="terms.html">term & conditions</a>
+        for using our services. Our terms describe how we use data and the options available to you.
+      </p>
+    </div>
+    <a class="btn" href="#">Accept</a>
+  </div>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -382,6 +381,11 @@
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 <script src="js/bootstrap.min.js"></script>
+
+<script src="js/wow.min.js"></script>
+<script>
+  new WOW().init();
+</script>
 
 <script src='js/main.js'></script>
 
