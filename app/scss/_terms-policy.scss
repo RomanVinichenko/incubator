@@ -1,5 +1,16 @@
 .terms-policy {
   padding: 246px 0 230px;
+  animation: appear 2.5s;
+
+  img {
+    position: absolute;
+    left: -200px;
+    top: 43%;
+
+    @include r($md) {
+      left: -150px;
+    }
+  }
 
   &__container {
     max-width: 976px;

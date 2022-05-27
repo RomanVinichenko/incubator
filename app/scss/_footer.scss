@@ -1,6 +1,7 @@
 .footer {
   padding: 34px 0;
   background: rgba(0, 0, 0, 0.2);
+  animation: appear 2.5s;
 
   &__wrapper {
     display: flex;

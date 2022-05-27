@@ -3,9 +3,13 @@
 
   h1 {
     margin-bottom: 20px;
+    width: 100%;
+    max-width: 100%;
     font-weight: 700;
     font-size: 96px;
-    line-height: 1.15;
+    line-height: 1.25;
+    white-space: nowrap;
+    animation: appear 2s, printed_text 2s steps(1000);
 
     span {
       -webkit-text-fill-color: transparent;
@@ -19,7 +23,7 @@
     }
 
     @include r(1600) {
-      font-size: 83px;
+      font-size: 72px;
     }
 
     @include r($xl) {
@@ -37,11 +41,13 @@
   }
 
   p {
+    @include text-clamp;
+
     margin-bottom: 100px;
     max-width: 977px;
+    animation: appear 2.5s;
 
     @include r(1600) {
-      max-width: 100%;
       font-weight: 400;
       font-size: 18px;
       line-height: 27px;
@@ -49,6 +55,7 @@
 
     @include r($xl) {
       margin-bottom: 75px;
+      max-width: 100%;
     }
 
     @include r($lg) {
@@ -67,6 +74,7 @@
     margin-bottom: 25px;
     width: 120px;
     height: 120px;
+    animation: appear 3s;
 
     @include r($md) {
       margin: 0 auto 15px;
@@ -81,9 +89,12 @@
     grid-template-columns: 1fr 1fr 1fr;
 
     h4 {
+      @include text-clamp;
+
       font-weight: 500;
       font-size: 24px;
       line-height: 36px;
+      animation: appear 3.5s;
 
       @include r(1600) {
         font-weight: 400;
@@ -127,6 +138,7 @@
   background-position: -130px 0;
   background-size: contain;
   background-repeat: no-repeat;
+  animation: appear 2.5s;
 
   h3 {
     margin: 0;
@@ -191,6 +203,8 @@
 }
 
 .tech {
+  animation: appear 2.5s;
+
   ul {
     display: grid;
     grid-gap: 51px;
@@ -254,6 +268,7 @@
   background-position: right -130px top 0;
   background-size: contain;
   background-repeat: no-repeat;
+  animation: appear 2.5s;
 
   h3 {
     @include r($md) {
@@ -395,6 +410,7 @@
   background-position: -130px 0;
   background-size: contain;
   background-repeat: no-repeat;
+  animation: appear 2.5s;
 
   h3 {
     margin-bottom: 20px;
@@ -699,6 +715,8 @@
 }
 
 .question {
+  animation: appear 2.5s;
+
   h3 {
     @include r($lg) {
       margin-bottom: 35px;
