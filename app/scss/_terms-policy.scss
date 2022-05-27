@@ -2,6 +2,10 @@
   padding: 246px 0 230px;
   animation: appear 2.5s;
 
+  .figure {
+    display: none;
+  }
+
   img {
     position: absolute;
     left: -200px;
