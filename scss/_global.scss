@@ -278,7 +278,7 @@ h3 {
   left: 0;
   right: 0;
   bottom: 130px;
-  z-index: 20;
+  z-index: 40;
   margin: 0 auto;
   padding: 0 50px;
   width: 100%;
@@ -382,7 +382,7 @@ h3 {
     position: absolute;
     right: 52px;
     top: 52px;
-    padding: 8px;
+    padding: 4px;
     cursor: pointer;
 
     @include r(1600) {
